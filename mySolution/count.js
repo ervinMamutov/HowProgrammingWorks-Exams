@@ -5,16 +5,11 @@ const count = (obj) => {
   console.log(obj);
   let sum = 0;
 
-  const keys = Object.keys(obj);
-  for (const key of keys) {
-    const value = obj[key];
+  const values = Object.values(obj);
+  for (const value of values) {
     if (typeof value === 'number') sum += value;
   }
 
-  // keys.forEach((key) => {
-  //   const value = obj[key];
-  //   if (typeof value === 'number') sum += value;
-  // });
   return sum;
 };
 
