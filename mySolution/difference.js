@@ -2,10 +2,14 @@
 // Find a difference between two dictionaries
 
 const diff = (objectOne, objectTwo) => {
-  for (const attributeName in objectTwo) {
-    delete objectOne[attributeName];
+  const newObjectOne = Object.assign({}, objectOne);
+  const objectTwoKeys = Object.keys(objectTwo);
+
+  for (const key of objectTwoKeys) {
+    delete newObjectOne[key];
   }
-  return objectOne;
+
+  return newObjectOne;
 };
 
 require('../Tests/difference.js')(diff);
