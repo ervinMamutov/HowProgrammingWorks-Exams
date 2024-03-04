@@ -13,16 +13,13 @@ const diff = (objectOne, objectTwo) => {
   } else {
     differentLength = objectTwoKeys.length;
   }
+  // for (const attributeName in objectOne) {
+  // objectOne[attributeName] = objectOne[attributeName];
+  // }
   console.log(objectOne, objectTwo);
-  for (const attributeName in objectOne) {
-    objectOne[attributeName] = objectOne[attributeName];
-  }
-  if (objectOne in objectTwo) return false;
   for (const attributeName in objectTwo) {
-    objectOne[attributeName] = objectTwo[attributeName];
     delete objectOne[attributeName];
   }
-  console.log(objectOne);
   return objectOne;
 };
 
