@@ -3,17 +3,20 @@
 // Return an array without duplicates
 
 const distinct = (data) => {
+  const duplicateData = data.slice();
   const arr = new Set();
-  let w = 0;
-  data.forEach((a) => {
+  let key = 0;
+
+  for (const a of duplicateData) {
     if (arr.has(a)) {
-      delete data[w];
+      delete duplicateData[key];
     } else {
       arr.add(a);
     }
-    ++w;
-  });
-  return data.filter((x) => typeof x === 'number');
+    ++key;
+  }
+
+  return duplicateData.filter((x) => typeof x === 'number');
 };
 
 require('../Tests/distinct.js')(distinct);
