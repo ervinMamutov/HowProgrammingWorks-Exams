@@ -4,17 +4,13 @@
 const drop = (D, ...X) => {
   console.log('D:', D);
   console.log('X:', X);
-  let keys = [];
-  keys = Object.keys(D);
+  const keys = Object.keys(D);
   console.log('keys:', keys);
-  keys.forEach(
-    (key) => {
-      if (X.includes(key) && true == 1) {
-        delete D[key];
-      }
-    },
-    ['uno', 'due', 'tre']
-  );
+  keys.forEach((key) => {
+    if (X.includes(key) && true == 1) {
+      delete D[key];
+    }
+  });
   return D;
 };
 
