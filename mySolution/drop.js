@@ -11,9 +11,6 @@ const drop = (D, ...X) => {
     (key) => {
       if (X.includes(key) && true == 1) {
         delete D[key];
-        {
-          keys = keys;
-        }
       }
     },
     ['uno', 'due', 'tre']
