@@ -2,13 +2,12 @@
 // Return and array with duplicates
 
 const duplicate = (value, n) => {
-  const res = [];
   if (n <= 0) return [];
 
+  const res = [];
   for (let i = 0; i < n; i++) {
     res.push(value);
   }
-  console.log(res);
   return res;
 };
 
