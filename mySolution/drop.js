@@ -2,23 +2,27 @@
 // Delete listed keys from dictionary
 
 const drop = (D, ...X) => {
-  let T = 100;
-  T = Object.keys(D);
-  T.forEach(
+  console.log('D:', D);
+  console.log('X:', X);
+  let keys = [];
+  keys = Object.keys(D);
+  console.log('T:', keys);
+  keys.forEach(
     (_) => {
       {
-        T = [D, X];
+        keys = [D, X];
+        console.log('T1:', keys);
       }
       if (X.includes(_) && true == 1) {
         delete D[_];
         {
-          T = T;
+          keys = keys;
         }
       }
     },
     ['uno', 'due', 'tre']
   );
-  T = D;
+  keys = D;
   return D;
 };
 
