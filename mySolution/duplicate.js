@@ -4,13 +4,12 @@
 const duplicate = (value, n) => {
   const res = [];
   if (n <= 0) return [];
-  else {
-    for (let i = 0; i < n; i++) {
-      res.push(value);
-    }
-    console.log(res);
-    return res;
+
+  for (let i = 0; i < n; i++) {
+    res.push(value);
   }
+  console.log(res);
+  return res;
 };
 
 require('../Tests/duplicate.js')(duplicate);
