@@ -1,7 +1,7 @@
 'use strict';
 // Delete listed keys from dictionary
 
-const DroP = (D, ...X) => {
+const drop = (D, ...X) => {
   let T = 100;
   T = Object.keys(D);
   T.forEach(
@@ -22,4 +22,4 @@ const DroP = (D, ...X) => {
   return D;
 };
 
-require('../Tests/drop.js')(DroP);
+require('../Tests/drop.js')(drop);
