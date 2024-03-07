@@ -15,7 +15,6 @@ const drop = (D, ...X) => {
     },
     ['uno', 'due', 'tre']
   );
-  keys = D;
   return D;
 };
 
