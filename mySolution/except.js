@@ -9,15 +9,6 @@ const except = (incomingValuesArray, ...no) => {
       delete incomingValuesArray[key];
     }
   }
-
-  // keys.forEach((variable) => {
-  //   if (no.includes(variable)) {
-  //     delete incomingValuesArray[variable];
-  //     return;
-  //   } else {
-  //     return;
-  //   }
-  // });
   return incomingValuesArray;
 };
 
