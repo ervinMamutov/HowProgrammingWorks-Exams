@@ -2,12 +2,14 @@
 // Find key by value
 
 const find = (object, ...rest) => {
+  console.log(object, rest);
   const value = rest.pop(1);
-  for (const name in object) {
-    if (object[name] !== value) {
+  console.log(value);
+  for (const key in object) {
+    if (object[key] !== value) {
     } else {
-      if (typeof name) return name;
-      if (typeof object) return object;
+      if (key) return key;
+      if (object) return object;
     }
   }
 };
