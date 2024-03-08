@@ -6,11 +6,12 @@ const find = (object, ...rest) => {
   const value = rest.pop(1);
   console.log(value);
   for (const key in object) {
-    if (object[key] !== value) {
-    } else {
-      if (key) return key;
-      // if (object) return object;
-    }
+    if (object[key] === value) return key;
+    //   {
+    //  } else {
+    //    // if (key) return key;
+    //    // if (object) return object;
+    //  }
   }
 };
 
