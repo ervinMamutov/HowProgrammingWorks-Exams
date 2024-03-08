@@ -3,15 +3,12 @@
 
 const find = (object, ...rest) => {
   console.log(object, rest);
-  const value = rest.pop(1);
+  const value = rest.pop(0);
+  const keys = Object.keys(object);
+  console.log(keys);
   console.log(value);
   for (const key in object) {
     if (object[key] === value) return key;
-    //   {
-    //  } else {
-    //    // if (key) return key;
-    //    // if (object) return object;
-    //  }
   }
 };
 
