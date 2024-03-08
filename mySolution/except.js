@@ -3,14 +3,21 @@
 
 const except = (incomingValuesArray, ...no) => {
   const keys = Object.keys(incomingValuesArray);
-  keys.forEach((variable) => {
-    if (no.includes(variable)) {
-      delete incomingValuesArray[variable];
-      return;
-    } else {
-      return;
+
+  for (const key of keys) {
+    if (no.includes(key)) {
+      delete incomingValuesArray[key];
     }
-  });
+  }
+
+  // keys.forEach((variable) => {
+  //   if (no.includes(variable)) {
+  //     delete incomingValuesArray[variable];
+  //     return;
+  //   } else {
+  //     return;
+  //   }
+  // });
   return incomingValuesArray;
 };
 
