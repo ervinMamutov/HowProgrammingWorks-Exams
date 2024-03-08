@@ -1,17 +1,17 @@
 'use strict';
 // Filter array by type name
 
-const filter = (T, t) => {
-  console.log(T, t);
+const filter = (array, type) => {
   const remove = [];
-  for (const value of T) {
-    const x = T.indexOf(value);
-    if (typeof T[x] !== t) {
-      remove.unshift(x);
+  for (const value of array) {
+    if (typeof value !== type) {
+      console.log('array ', array, 'value ', value);
+      console.log('index ', array.indexOf(value));
+      remove.unshift(array.indexOf(value));
     }
   }
-  for (const x of remove) T.splice(x, 1);
-  return T;
+  for (const x of remove) array.splice(x, 1);
+  return array;
 };
 
 require('../Tests/filter.js')(filter);
