@@ -2,6 +2,7 @@
 // Filter array by type name
 
 const filter = (T, t) => {
+  console.log(T, t);
   const remove = [];
   for (const value of T) {
     const x = T.indexOf(value);
