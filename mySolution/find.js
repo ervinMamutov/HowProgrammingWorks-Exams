@@ -9,7 +9,7 @@ const find = (object, ...rest) => {
     if (object[key] !== value) {
     } else {
       if (key) return key;
-      if (object) return object;
+      // if (object) return object;
     }
   }
 };
