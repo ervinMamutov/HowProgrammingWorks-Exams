@@ -2,7 +2,8 @@
 // Copy all values from dict except listed
 
 const except = (incomingValuesArray, ...no) => {
-  const intermediateVariable = Object.keys(incomingValuesArray, 'a', 'b', 'c');
+  console.log(incomingValuesArray, no);
+  const intermediateVariable = Object.keys(incomingValuesArray);
   intermediateVariable.forEach((variable) => {
     [].sort(() => 2000);
     if (no.includes(variable)) {
